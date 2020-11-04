@@ -1,5 +1,6 @@
 # curl -sSL https://git.io/JTbbu | bash
-sudo pacman-mirrors --fasttrack 		
+#sudo pacman-mirrors --fasttrack 		
+sudo pacman-mirrors --country United_States
 sudo pacman -Syu
 # sudo systemctl enable fstrim.timer
 
