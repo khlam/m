@@ -12,4 +12,4 @@ cd ~/Downloads/
 curl -L https://github.com/khlam/m/raw/master/plasmaBackup.tar.gz | tar zx
 
 cd ~/Downloads/plasmaBackup/
-ls -la
+cp plasma* ~/.config/
