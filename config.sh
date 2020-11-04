@@ -6,4 +6,4 @@ sudo pacman -Syu --noconfirm
 
 sudo pacman -Rcns kate konversation kdeconnect --noconfirm
 
-sudo pacman -S keepassxc --noconfirm
+sudo pacman -S keepassxc vlc --noconfirm
