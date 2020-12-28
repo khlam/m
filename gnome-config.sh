@@ -1,3 +1,4 @@
+# curl -sSL https://git.io/khlgnome | bash
 sudo pacman-mirrors --country United_States
 sudo pacman -Syu --noconfirm
 
