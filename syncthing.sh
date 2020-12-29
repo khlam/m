@@ -1,16 +1,12 @@
-Download syncthing from github
+cd ~/Downloads/
+
 curl -s https://api.github.com/repos/syncthing/syncthing/releases/latest | grep browser_download_url | grep linux-amd64 | cut -d '"' -f 4 | wget -qi -
 
-Unzip syncthing
 tar xvf syncthing-linux-amd64*.tar.gz
- 
-Put syncthing into system folder
+
 sudo cp syncthing-linux-amd64-*/syncthing  /usr/local/bin/
 
-Create service to start on boot
-sudo vim /etc/systemd/system/syncthing@.service
-
-[Unit]
+sudo echo '[Unit]
 Description=Syncthing - Open Source Continuous File Synchronization for %I
 Documentation=man:syncthing(1)
 After=network.target
@@ -30,12 +26,12 @@ MemoryDenyWriteExecute=true
 NoNewPrivileges=true
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=multi-user.target' > syncthing@.service
 
-Update and start service
+sudo mv syncthing@.service /etc/systemd/system/
+
 sudo systemctl daemon-reload
 sudo systemctl start syncthing@$USER
 sudo systemctl enable syncthing@$USER
 
-Confirm it’s running
 sudo systemctl status syncthing@$USER
