@@ -7,7 +7,7 @@ tar xvf syncthing-linux-amd64*.tar.gz
 sudo cp syncthing-linux-amd64-*/syncthing  /usr/local/bin/
 
 sudo echo '[Unit]
-Description=Syncthing - Open Source Continuous File Synchronization for %I
+Description=Syncthing
 Documentation=man:syncthing(1)
 After=network.target
 
